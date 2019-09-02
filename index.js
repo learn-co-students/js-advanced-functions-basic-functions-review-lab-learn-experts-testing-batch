@@ -17,15 +17,23 @@ function wrapAdjective(str = "*"){
 }
 
 const Calculator = {
-  add: function(n1, n2) { return n1 + n2 },
-  subtract: function(n1, n2) { return n1 - n2 },
-  multiply: function(n1, n2) { return n1 * n2 },
-  divide: function(n1, n2) { return n1 / n2 }
+  add: function(n1, n2) {
+    return n1 + n2
+  },
+  subtract: function(n1, n2) {
+    return n1 - n2
+  },
+  multiply: function(n1, n2) {
+    return n1 * n2
+  },
+  divide: function(n1, n2) {
+    return n1 / n2
+  }
 }
 
 function actionApplyer(start, fnArray){
   if (fnArray.length === 0) return start
-  let result = start
-  fnArray.forEach(fn => result = fn(result))
-  return result
+
+  fnArray.forEach(fn => start = fn(start))
+  return start
 }
