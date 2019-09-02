@@ -33,7 +33,6 @@ const Calculator = {
 
 function actionApplyer(start, fnArray){
   if (fnArray.length === 0) return start
-
   fnArray.forEach(fn => start = fn(start))
   return start
 }
